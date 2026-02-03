@@ -1,0 +1,20 @@
+using System;
+
+public class Prog_3
+{
+    public static void Main()
+    {
+        Console.WriteLine ("Enter Principal Amount: ");
+        int PriAmt = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine ("Enter Rate: ");
+        int Rate = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine ("Enter Year: ");
+        int Year = int.Parse(Console.ReadLine());
+        
+        int SimpInter = (PriAmt * Rate * Year) / 100;
+        
+        Console.WriteLine ("Simple Interest is: " + SimpInter);
+    }
+}
