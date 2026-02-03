@@ -1,0 +1,23 @@
+using System;
+
+class Prog_2
+{
+    static void Main() 
+    {
+        Console.Write("Enter first number: ");
+        int num1 = int.Parse(Console.ReadLine());
+        
+        Console.Write("Enter second number: ");
+        int num2 = int.Parse(Console.ReadLine());
+        
+        int add = num1+num2;
+        int subt = num1-num2;
+        int multi = num1*num2;
+        int divi = num1/num2;
+        
+        Console.WriteLine("Add is: "+ add);
+        Console.WriteLine("Subt is: " + subt);
+        Console.WriteLine("Multi is: " + multi);
+        Console.WriteLine("Divi is: " + divi);
+    }
+}
