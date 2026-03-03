@@ -1,0 +1,28 @@
+//Write a program to calculate electricity bill based on unit slabs.
+Add a fixed meter charge and apply GST if the bill exceeds a certain amount. 
+
+using System;
+
+class ElectricityBill
+{
+    static void Main()
+    {
+        Console.Write("Enter units: ");
+        double units = double.Parse(Console.ReadLine());
+        double bill = 0;
+
+        if (units <= 100)
+            bill = units * 1.5;
+        else if (units <= 200)
+            bill = 150 + (units - 100) * 2.5;
+        else
+            bill = 350 + (units - 200) * 4;
+
+        bill += 50;  // Fixed charge
+
+        if (bill > 500)
+            bill *= 1.18;  // 18% GST
+
+        Console.WriteLine($"Total Bill: ₹{bill:F2}");
+    }
+}
