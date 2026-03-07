@@ -1,0 +1,31 @@
+//Create a C# application that validates user login credentials using a predefined username and password with limited login attempts.
+Conditional Statements, Loops
+
+using System;
+
+class Program {
+   static void Main() {
+       string username = "admin";
+       string password = "pass123";
+       int attempts = 3;
+        
+      while (attempts > 0) {
+           Console.Write("Enter username: ");
+           string inputUser = Console.ReadLine();
+           Console.Write("Enter password: ");
+           string inputPass = Console.ReadLine();
+            
+         if (inputUser == username && inputPass == password) {
+             Console.WriteLine("Login successful! Welcome!");
+              return;
+          } else {
+             attempts--;
+             if (attempts > 0) {
+                 Console.WriteLine($"Wrong credentials! {attempts} attempts left.");
+            } else {
+                Console.WriteLine("Login failed! Account locked.");
+         }
+       }
+    }
+  }
+}
