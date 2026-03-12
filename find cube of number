@@ -1,0 +1,12 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num = 3;
+        int cube = num * num * num;
+
+        Console.WriteLine("Cube = " + cube);
+    }
+}
