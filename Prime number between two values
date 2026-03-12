@@ -1,0 +1,27 @@
+// Write a program to find all prime number between two values inputted by user
+
+using System;
+
+class Program {
+static void Main() {
+    Console.Write("Enter start number: ");
+    int start = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Enter end number: ");
+    int end = Convert.ToInt32(Console.ReadLine());
+        
+    Console.WriteLine($"Prime numbers between {start} and {end}:");
+    for (int num = start; num <= end; num++) {
+        bool isPrime = true;
+        if (num > 1) {
+            for (int i = 2; i <= Math.Sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                    }
+                }
+            if (isPrime) Console.Write(num + " ");
+            }
+        }
+    Console.WriteLine();
+    }
+}
