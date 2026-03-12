@@ -1,0 +1,26 @@
+//Write a program to find minimum of three number using conditional operator
+
+
+using System;
+
+class MinimumOfThree
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter third number: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int min = a;
+
+        if (b < min) min = b;
+        if (c < min) min = c;
+
+        Console.WriteLine("Minimum number is: " + min);
+    }
+}
