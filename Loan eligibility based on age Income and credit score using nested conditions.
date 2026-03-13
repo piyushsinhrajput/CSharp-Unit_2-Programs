@@ -1,0 +1,49 @@
+//Write a program to determine loan eligibility based on age, income, and credit score using nested conditions.
+
+using System;
+
+class LoanEligibility
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter age: ");
+        int age = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Enter annual income: ");
+        int income = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Enter credit score: ");
+        int creditScore = int.Parse(Console.ReadLine());
+        
+        bool eligible = false;
+        string reason = "";
+        
+        if (age >= 21 && age <= 65)
+        {
+            if (income > 300000)
+            {
+                if (creditScore > 650)
+                {
+                    eligible = true;
+                    reason = "Loan approved!";
+                }
+                else
+                {
+                    reason = "Low credit score";
+                }
+            }
+            else
+            {
+                reason = "Income too low";
+            }
+        }
+        else
+        {
+            reason = "Age not eligible";
+        }
+        
+        Console.WriteLine($"\nAge: {age}, Income: Rs {income:N0}, Credit: {creditScore}");
+        Console.WriteLine($"Status: {(eligible ? " Eligible" : " Not Eligible")}");
+        Console.WriteLine($"Reason: {reason}");
+    }
+}
