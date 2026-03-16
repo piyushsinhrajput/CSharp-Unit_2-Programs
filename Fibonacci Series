@@ -1,0 +1,21 @@
+// Write a Program to find Fibonacci Series up to a number inputted by user.
+
+using System;
+
+class Program {
+    static void Main() {
+        Console.Write("Enter number of terms: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        
+        int a = 0, b = 1;
+        Console.Write($"{a} {b} ");
+        
+        for (int i = 3; i <= n; i++) {
+            int next = a + b;
+            Console.Write($"{next} ");
+            a = b;
+            b = next;
+        }
+        Console.WriteLine();
+    }
+}
