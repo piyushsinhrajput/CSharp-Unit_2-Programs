@@ -1,0 +1,38 @@
+using System;
+
+namespace Lab10
+{
+    class Pro2
+    {
+        static void Main(string[] args)
+        {
+            int[] marks = new int[5];
+            int sum = 0;
+            double average;
+
+            Console.WriteLine("Enter marks of 5 students:");
+
+            // Input marks
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter marks of student " + (i + 1) + ": ");
+                marks[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            // Calculate sum
+            for (int i = 0; i < 5; i++)
+            {
+                sum += marks[i];
+            }
+
+            // Calculate average
+            average = sum / 5.0;
+
+            // Display result
+            Console.WriteLine("\nTotal Marks = " + sum);
+            Console.WriteLine("Average Marks = " + average);
+
+            Console.ReadLine();
+        }
+    }
+}
