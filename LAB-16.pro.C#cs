@@ -1,0 +1,59 @@
+using System;
+
+// Define the Exam interface
+interface IExam
+{
+    bool Pass(int mark);
+}
+
+// Define the Classify interface
+interface IClassify
+{
+    string Division(int average);
+}
+
+// The Result class implements both interfaces
+class Result : IExam, IClassify
+{
+    // Implementation of the Pass method
+    public bool Pass(int mark)
+    {
+        return mark >= 50;
+    }
+
+    // Implementation of the Division method
+    public string Division(int average)
+    {
+        if (average >= 60)
+        {
+            return "First";
+        }
+        else if (average >= 50)
+        {
+            return "Second";
+        }
+        else
+        {
+            return "No division";
+        }
+    }
+}
+
+// Main program to test the logic
+class Program
+{
+    static void Main()
+    {
+        Result studentResult = new Result();
+
+        // Testing the Pass method
+        int myMark = 55;
+        bool isPassed = studentResult.Pass(myMark);
+        Console.WriteLine($"Mark: {myMark} | Passed: {isPassed}");
+
+        // Testing the Division method
+        int myAverage = 62;
+        string grade = studentResult.Division(myAverage);
+        Console.WriteLine($"Average: {myAverage} | Division: {grade}");
+    }
+}
